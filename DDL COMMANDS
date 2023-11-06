@@ -1,0 +1,16 @@
+-CREATE TABLE:
+Used to create table
+Create table tablename (column_name1 datatype(size) constraints,column_name2 datatype(size) constraints....)
+-ALTER TABLE:
+Used to add a new columnn,modify the existing column, to inlcude or drop integrity constraint.
+alter table tablename add/modify (attribute datatype(size));
+-DROP TABLE
+It will delete the table structure provided the table should be empty.
+drop table table_name;
+-TRUNCATE TABLE
+If there is no further use of records stored in a table and the structure has to be retained
+then the records (rows) alone can be deleted.
+truncate table table_name;
+-DESC
+This is used to view the structure of the table.
+desc table_name;
