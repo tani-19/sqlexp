@@ -1,0 +1,20 @@
+mysql> use warehouse;
+Database changed
+mysql> create table products (p_id int not null auto_increment,p_name varchar(20) not null, cost float not null default 0.0,price float not null
+default 0.0, primary key(p_id));
+Query OK, rows affected (0.01 sec)
+mysql> insert into products values("Basic widget",5,8), ("Micro widget",1.50,3.5), ("Mega widget", 100,200); ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into products (p_name, cost,price) values ("Basic widget",5,8), ("Micro widget", 1.50,3.5), ("Mega widget",100,200);
+Query OK, 3 rows affected (0.00 sec)
+Records: 3 Duplicates: 0 Warnings: 0
+mysql> select from warehouse;
+ERROR 1146 (42502): Table 'warehouse.warehouse' doesn't exist
+mysql> select * from products;
+
+mysql> select *,calcProfit (cost,price) as profit from products;
+
+mysql> call procedureTest() \g
+
+Hence, we studied the concepts of creating a function and
+procedure and performing operation on the table using those functions on
+MySQL server.
