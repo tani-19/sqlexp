@@ -7,13 +7,25 @@ mysql> insert into products values("Basic widget",5,8), ("Micro widget",1.50,3.5
 mysql> insert into products (p_name, cost,price) values ("Basic widget",5,8), ("Micro widget", 1.50,3.5), ("Mega widget",100,200);
 Query OK, 3 rows affected (0.00 sec)
 Records: 3 Duplicates: 0 Warnings: 0
-mysql> select from warehouse;
-ERROR 1146 (42502): Table 'warehouse.warehouse' doesn't exist
-mysql> select * from products;
+
+mysql> DELIMITER $$
+create function calcProfit ( cost FLOAT, price float) RETURNS DECIMAL (9,2)
+BEGIN
+DECLARE profit DECIMAL (9,2);
+SET profit = price - cost;
+REURN profit;
+END$$
+DELIMITER;
+
 
 mysql> select *,calcProfit (cost,price) as profit from products;
 
-mysql> call procedureTest() \g
+mysql> DELIMITER $$
+CREATE procedure procedureTest()
+BEGIN
+SELECT p_name from products;
+END$$
+DELIMITER;
 
 Hence, we studied the concepts of creating a function and
 procedure and performing operation on the table using those functions on
