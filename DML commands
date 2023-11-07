@@ -1,0 +1,28 @@
+INSERT,SELECT,UPDATE,DELETE
+create database stud;
+use stud;
+
+create tables stud (s_id int(10), s_name varchar(30), s_age(02), s_subject(15));
+
+- Insert more than a record into stud table using a single insert
+command.
+SQL> insert into stud values(1,'Tani','19',DBMS)
+1 row created.
+SQL> insert into stud values(2,'Praty','17',DSA)
+1 row created.
+SQL> insert into stud values(3,'Viggy','17',SQL)
+1 row created.
+select * from stud;
+
+SQL> update stud set s_age=18 where s_id=1;
+2 rows updated.
+SQL> desc stud;
+
+SQL>insert into stud (s_id int, s_name varchar, s_age, s_subject) values (4,'Devyani',18,'SQL');
+select * stud;
+
+delete from stud where s_id=4
+
+select * from stud:
+
+
