@@ -1,0 +1,26 @@
+create table students and teachers; 
+
+assign 3 values to each with 1 same column and 3 columns each (s_name, subject, s_age), (t_name, subject, t_age); INSERT WITH 2 VALUES SAME IN SUBJECT C0LUMN
+
+select * from students union select * from teachers;
+
+select * from students union all select * from teachers;
+
+select * from students intersect select * from teachers;
+
+select * from students - select * from teachers;
+
+FOR JOIN QUERIES:
+
+select * from students;
+
+select * from teachers;
+JOIN/EQUI-JOIN
+select * from students join teachers ON student.subject=teacher.subject;
+NON EQUI-JOIN
+select * from students join teachers ON student.subject!=teacher.subject;
+LEFT JOIN
+select * from students LEFT join teachers ON student.subject=teacher.subject;
+RIGHT JOIN;
+select * from students RIGHT join teachers ON student.subject=teacher.subject;
+
