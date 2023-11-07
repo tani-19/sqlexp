@@ -1,0 +1,27 @@
+create tables customers;
+
+insert into customer values (cid,cname,cage,caddress);
+WITH 4 VALUES
+select * from customers;
+
+create view customers_view as select cname, age from customers;
+
+select * from customers_view;
+
+update customers_view set age=19 where cname="Praty";
+
+select * from customers_view;
+
+delete from customers_view where cname="Devyani";
+
+select * from customers;
+
+drop view customers_view;
+
+select * from customers;
+
+Hence, we understood the concept of view and performed DDL,DML commands
+on the view using MySQL server.
+
+
+
